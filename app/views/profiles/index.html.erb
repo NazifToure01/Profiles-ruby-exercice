@@ -1,0 +1,24 @@
+<h1 style="margin-bottom: 40px; width: 100%; text-align: center; margin-top: 20px">Tous les profiles</h1>
+
+<a href="/profiles/new" type="button"  style="margin-bottom: 20px;  text-align: center; justify-content: center">Ajouter un profile</a>
+
+<ul class="">
+
+  <% @profiles.each do |profile| %>
+    <div class="d-inline" style="align-self: flex-start">
+      <div class="card  " style="width: 18rem; margin: 10px; display: flex">
+        <img src="<%=  profile.image %> " class="card-img-top" alt="...">
+
+        <div class="card-body">
+          <h5 class="card-title"> <%=  profile.firstname %> & <%=  profile.lastname %> </h5>
+          <a  href="<%= profile_path(profile) %>">
+            Détails du profile
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  <% end %>
+</ul>
+

@@ -1,0 +1,32 @@
+<div class="container justify-center"  style="margin-top: 35px;">
+
+  <a href="/" >Revenir aux profiles</a>
+
+  <h1>Nouveau profile</h1>
+  <%= form_with model: @profile do |form| %>
+    <div>
+      <%= form.label :firstname %><br>
+      <%= form.text_field :firstname %>
+    </div>
+
+    <div>
+      <%= form.label :lastname %><br>
+      <%= form.text_area :lastname %>
+    </div>
+
+    <div>
+      <%= form.label :description %><br>
+      <%= form.text_area :description %>
+    </div>
+
+    <div>
+      <%= form.label :image %><br>
+      <%= form.text_area :image %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+
+</div>

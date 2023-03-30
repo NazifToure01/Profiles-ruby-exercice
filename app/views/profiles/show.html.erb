@@ -1,0 +1,19 @@
+<a href="/" class="btn btn-primary" style="margin-top: 20px;">Voir tous les profiles</a>
+
+<div style="width: 100%; align-items: center; text-align: center">
+
+  <h1><%= @profile.firstname %> | <%= @profile.lastname %> </h1>
+  <img src="<%= @profile.image %>" alt="" style="width: 200px; height: 200px">
+  <p><%= @profile.description %></p>
+
+  <ul>
+    <li><%= link_to "Supprimer", profile_path(@profile), data: {
+      turbo_method: :delete,
+      turbo_confirm: "êtes vous sur de vouloir supprimer ce profile ?"
+    } %></li>
+  </ul>
+</div>
+
+
+
+
